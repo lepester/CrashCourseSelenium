@@ -25,7 +25,7 @@ public class RozetkaTest extends BasePage{
     public void rozetkaTest() {
         String testSearchText = "rozetka";
         String testResultText = "rozetka";
-        String productTitle = "монитор";
+        String productTitle = "Монитор";
 
         GoogleHomePage homePage = new GoogleHomePage(driver);
         homePage.searchProduct(testSearchText);
