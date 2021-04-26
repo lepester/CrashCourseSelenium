@@ -29,8 +29,7 @@ public class ProductSearchTest {
         MainPage mainPage = new MainPage(driver);
         mainPage.openPage()
                 .findSearchField()
-                .searchForGraphicsCard()
-                .verifyGraphicsCardPresented();
+                .searchForGraphicsCard();
     }
 
     @AfterTest(alwaysRun = true)

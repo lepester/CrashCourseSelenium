@@ -32,22 +32,10 @@ public class LogInTest {
         mainPage.openPage()
                 .findSearchField()
                 .searchForGraphicsCard()
-                .verifyGraphicsCardPresented();
-
-        SearchResultPage searchResultPage = new SearchResultPage(driver);
-        searchResultPage.ProductPage()
-                .verifyProductPagePresented();
-
-        ProductPage productPage = new ProductPage(driver);
-        productPage.logIn()
-                .verifySignInPage();
-
-        SignInPage logInPage = new SignInPage(driver);
-        logInPage.createAccount()
-                .verifyCreateAccountPage();
-
-        CreateAccountPage createAccountPage = new CreateAccountPage(driver);
-        createAccountPage.enterYourName()
+                .ProductPage()
+                .logIn()
+                .createAccount()
+                .enterYourName()
                 .enterEmail()
                 .enterPassword()
                 .reEnterPassword();

@@ -29,10 +29,8 @@ public class MusicLibraryTest {
     @Test
     public void musicLibraryTest() {
         MainPage mainPage = new MainPage(driver);
-        mainPage.openPage().musicLibraryPage();
-
-        MusicLibraryPage musicLibraryPage = new MusicLibraryPage(driver);
-        musicLibraryPage.verifyMusicLibraryPage();
+        mainPage.openPage()
+                .musicLibraryPage();
     }
 
     @AfterTest(alwaysRun = true)

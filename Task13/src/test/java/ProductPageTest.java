@@ -31,10 +31,7 @@ public class ProductPageTest {
         mainPage.openPage()
                 .findSearchField()
                 .searchForGraphicsCard()
-                .verifyGraphicsCardPresented();
-
-        SearchResultPage searchResultPage = new SearchResultPage(driver);
-        searchResultPage.ProductPage()
+                .ProductPage()
                 .verifyProductPagePresented();
     }
 
