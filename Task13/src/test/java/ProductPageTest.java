@@ -31,7 +31,6 @@ public class ProductPageTest {
         mainPage.openPage()
                 .findSearchField()
                 .searchForGraphicsCard()
-                .ProductPage()
                 .verifyProductPagePresented();
     }
 
