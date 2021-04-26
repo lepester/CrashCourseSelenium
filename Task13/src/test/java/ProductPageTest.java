@@ -31,7 +31,7 @@ public class ProductPageTest {
         mainPage.openPage()
                 .findSearchField()
                 .searchForGraphicsCard()
-                .verifyProductPagePresented();
+                .verifyGraphicsCardPresented();
     }
 
     @AfterTest(alwaysRun = true)
