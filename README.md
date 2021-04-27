@@ -17,3 +17,5 @@ Task 12 - OOP in TAQC
 Task 13 - TAQC patterns. Part 1
 
 Task 14 - Test automation approaches
+
+Task 15 - TAQC patterns. Part 2
