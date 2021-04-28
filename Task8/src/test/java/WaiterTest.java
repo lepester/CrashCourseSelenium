@@ -30,7 +30,6 @@ public class WaiterTest extends BasePage {
     @Test
     public void main() {
         String testSearchText = "монитор";
-        String testResultText = "монитор";
 
         RozetkaHomePage rozetkaHomePage = new RozetkaHomePage(driver);
         rozetkaHomePage.searchProduct(testSearchText);
