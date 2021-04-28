@@ -4,10 +4,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -27,15 +25,10 @@ public class WaiterTest extends BasePage {
         driver = new ChromeDriver();
         driver.get("https://rozetka.com.ua/");
         driver.manage().window().maximize();
-
-
     }
 
     @Test
     public void main() {
-       // Actions actions = new Actions(driver);
-        WebDriverWait pageLoad = new WebDriverWait(driver, 5);
-
         String testSearchText = "монитор";
         String testResultText = "монитор";
 
@@ -46,20 +39,9 @@ public class WaiterTest extends BasePage {
         rozetkaSearchResults.ClickFirstProduct();
 
         RozetkaProductPage rozetkaProductPage = new RozetkaProductPage(driver);
-        rozetkaProductPage.ClickToCheckout();
-
-
-       // String preloaderSpinner = "//div[contains(@class,'modal__preloader')]";
-
-        pageLoad.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://rozetka.com.ua//checkout/']")));
-        WebElement acceptYes = driver.findElement(By.xpath("//a[@href='https://rozetka.com.ua//checkout/']"));
-        acceptYes.click();
-
-        String preloaderLine = "//div[@class='preloader']";
-        pageLoad.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(preloaderLine)));
-
-
+        rozetkaProductPage.ClickToCheckout().checkoutPage();
     }
+
     @AfterMethod(alwaysRun = true)
     public void takeScreenshot(ITestResult result) {
         if (!result.isSuccess())
@@ -72,6 +54,11 @@ public class WaiterTest extends BasePage {
                 e.printStackTrace();
             }
         driver.quit();
+    }
+
+    @AfterSuite
+    public void afterSuite() {
+        System.out.println("All tests passed");
     }
 }
 

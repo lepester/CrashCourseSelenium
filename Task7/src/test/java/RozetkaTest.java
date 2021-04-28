@@ -1,9 +1,7 @@
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+
 import java.util.concurrent.TimeUnit;
 
 public class RozetkaTest extends BasePage{
@@ -21,7 +19,7 @@ public class RozetkaTest extends BasePage{
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
-    @Test(invocationCount = 5)
+    @Test
     public void rozetkaTest() {
         String testSearchText = "rozetka";
         String testResultText = "rozetka";
@@ -49,5 +47,10 @@ public class RozetkaTest extends BasePage{
     @AfterMethod(alwaysRun = true)
     public void quitBrowser() {
         driver.quit();
+    }
+
+    @AfterSuite
+    public void afterSuite() {
+        System.out.println("All tests passed");
     }
 }

@@ -1,10 +1,7 @@
 import org.openqa.selenium.*;
 import org.testng.Assert;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import WebDriverFactoryProps.DriverType;
 import WebDriverFactoryProps.WebDriverFactory;
 import java.io.File;
@@ -64,5 +61,10 @@ public class BrowserFactoryTest extends BasePage{
 
             }
         driver.quit();
+    }
+
+    @AfterSuite
+    public void afterSuite() {
+        System.out.println("All tests passed");
     }
 }

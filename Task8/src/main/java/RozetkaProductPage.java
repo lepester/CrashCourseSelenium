@@ -7,8 +7,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RozetkaProductPage extends BasePage{
     private By tabItemMain = By.xpath("//product-tab-main");
-    private By buyButton = By.xpath("//span[@class='buy-button__label']");
+    private By buyButton = By.cssSelector("span.buy-button__label");
     private By modalPreloader = By.xpath("//div[contains(@class,'modal__preloader')]");
+
 
     public RozetkaProductPage(WebDriver driver) {
         this.driver = driver;
@@ -18,9 +19,9 @@ public class RozetkaProductPage extends BasePage{
 
     public Checkout ClickToCheckout() {
         WebDriverWait pageLoad = new WebDriverWait(driver, 5);
-        pageLoad.until(ExpectedConditions.elementToBeClickable(buyButton));
-        WebElement target = driver.findElement(By.xpath("//span[@class='buy-button__label']"));
+        WebElement target = driver.findElement(By.cssSelector("span.buy-button__label"));
         Actions actions = new Actions(driver);
+        pageLoad.until(ExpectedConditions.elementToBeClickable(buyButton));
         actions.moveToElement(target).perform();
         target.click();
 

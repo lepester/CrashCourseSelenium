@@ -2,10 +2,7 @@ import factory.DriverManager;
 import factory.DriverFactoryManager;
 import factory.DriverType;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObject.MainPage;
 
 public class ProductSearchTest {
@@ -35,5 +32,10 @@ public class ProductSearchTest {
     @AfterTest(alwaysRun = true)
     public void shutDown() {
         driverManager.quitDriver();
+    }
+
+    @AfterSuite
+    public void afterSuite() {
+        System.out.println("All tests passed");
     }
 }

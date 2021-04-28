@@ -53,4 +53,9 @@ public class FieldValidation extends BasePage {
     public void quitBrowser() {
         driver.quit();
     }
+
+    @AfterSuite
+    public void afterSuite() {
+        System.out.println("All tests passed");
+    }
 }

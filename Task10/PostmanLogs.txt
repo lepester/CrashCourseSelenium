@@ -1,0 +1,16 @@
+curl --location --request GET 'https://postman-echo.com/get?foo1=bar1&foo2=bar2' \
+--header 'Cookie: sails.sid=s%3A53cpfCvWX1UNVcfFryJMEZCz-kl1aWQa.JpJ2hTrMRchKd6afBK%2Bo8QOlhBJ%2B8EgqFvVW4lwOpnw'
+==============================================================================================
+curl --location --request POST 'https://postman-echo.com/post' \
+--header 'Cookie: sails.sid=s%3ALaaBKRkRWmuG1mZtKT6hRnjjbBuWjX0N.KRIsW29uSqoe3tXnYdsHVLN1rD2qr%2BTPcbC1l7IV8bk'
+==============================================================================================
+curl --location --request PUT 'https://postman-echo.com/put' \
+--header 'Cookie: sails.sid=s%3AythitLEo2t8KtapFiZDFaZHkYEnhv2OJ.gEO8%2Fzbl%2B0kZxf6suIoigkmzxik51oo%2Bv9LJZXg2Wb0'
+==============================================================================================
+curl --location --request DELETE 'https://postman-echo.com/delete' \
+--header 'Cookie: sails.sid=s%3AcyIP7lmwE6_uvF5lem9e9DZ-31uEGcLy.2cXLjV6i4LqSv4UI4IRcmF7x32PKgXW6ajvD7EnbbVU'
+==============================================================================================
+curl --location --request GET 'http://jsonplaceholder.typicode.com/users' \
+--header 'Cookie: __cfduid=dfec981453eae4eadc51ab9027ba716811617366681'
+==============================================================================================
+curl --location --request PATCH 'reqres.in/api/users/2'
