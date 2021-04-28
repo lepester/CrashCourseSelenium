@@ -18,6 +18,6 @@ Task 13 - TAQC patterns. Part 1
 
 Task 14 - Test automation approaches
 
-##Task 15 - TAQC patterns. Part 2##
+Task 15 - TAQC patterns. Part 2
 
 Task 16 - Test data in the test automation
