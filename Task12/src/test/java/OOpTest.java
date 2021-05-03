@@ -29,7 +29,7 @@ public class OOpTest extends BasePage{
 
         String expectedResult = driver.getTitle();
         String actualResult = "Мониторы - ROZETKA | Купить монитор для компьютера в Киеве: цена, отзывы, продажа";
-        Assert.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(actualResult, expectedResult);
 
         SearchResultsPage searchResultsPage = new SearchResultsPage(driver);
         searchResultsPage.ClickFirstProduct();
