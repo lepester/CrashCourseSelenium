@@ -1,6 +1,6 @@
 # CrashCourseSelenium Repository
 
-Selenium based Tests, API Tests 
+Selenium based Tests, API Tests, BDD Tests
 
 Task 6 - Test framework setup.
 
